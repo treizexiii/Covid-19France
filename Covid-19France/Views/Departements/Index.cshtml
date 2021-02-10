@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Covid_19France.Models.Data>
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<div class="row">
+    <div class="text-center col-md-12">
+
+        <h1 class="display-4">Départements</h1>
+
+        <p class="font-weight-bold text-muted">
+            Données au @Html.DisplayFor(model => model.First().Date)
+        </p>
+        <table class="table table-responsive-md table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>
+                        Département
+                    </th>
+                    <th>
+                        Guéris
+                    </th>
+                    <th>
+                        Cas Confirmés
+                    </th>
+                    <th>
+                        Hospitalisations
+                    </th>
+                    <th>
+                        Nouvelles hospitalisations
+                    </th>
+                    <th>
+                        Réanimations
+                    </th>
+                    <th>
+                        Nouvelles Réanimations
+                    </th>
+                    <th>
+                        Décés
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nom)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Gueris)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CasConfirmes)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Hospitalises)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NouvellesHospitalisations)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Reanimation)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NouvellesReanimations)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Deces)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

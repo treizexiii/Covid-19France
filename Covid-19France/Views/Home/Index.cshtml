@@ -1,0 +1,29 @@
+﻿@model Covid_19France.Models.Data
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center justify-content-center">
+    <h1 class="display-3">Welcome</h1>
+    <div>
+        <h4 class="display-4">Les données pour la journée du :</h4>
+        <h4 class="display-4">@Html.DisplayFor(model => model.Date)</h4>
+        <hr />
+        <div class="blockquote">
+            <p>Nombre de cas guéris : @Html.DisplayFor(model => model.Gueris)</p>
+            <p>Nombre de cas confirmés : @Html.DisplayFor(model => model.CasConfirmes)</p>
+            <p>Nombre de réanimation : @Html.DisplayFor(model => model.Reanimation)</p>
+            <p>Nombre de décés : @ViewData["decesTotals"]</p>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="card col-md-6 text-white bg-secondary" style="">
+                <p>Mise à jour quotidienne</p>
+                <p>Nouvelles hospitalisations : @Html.DisplayFor(model => model.NouvellesHospitalisations)</p>
+                <p>Nouvelles réanimation : @Html.DisplayFor(model => model.NouvellesReanimations)</p>
+            </div>
+        </div>
+
+    </div>
+</div>
