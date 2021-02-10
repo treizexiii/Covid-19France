@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Covid_19France.Models.Data>
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="display-4">Département: @Html.DisplayFor(model => model.First().Nom)</h1>
+
+<table class="table table-responsive-md table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gueris)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CasConfirmes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hospitalises)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reanimation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Deces)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NouvellesHospitalisations)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NouvellesReanimations)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CasConfirmesEhpad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DecesEhpad)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gueris)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CasConfirmes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hospitalises)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reanimation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deces)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NouvellesHospitalisations)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NouvellesReanimations)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CasConfirmesEhpad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DecesEhpad)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

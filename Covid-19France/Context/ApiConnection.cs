@@ -14,7 +14,7 @@ namespace Covid_19France.Context
         
         private const string GLOBAL_DATA_URL = "https://coronavirusapi-france.now.sh/FranceLiveGlobalData";
         private const string DATA_BY_DEPT_URL = "https://coronavirusapi-france.now.sh/LiveDataByDepartement";
-        private const string ALL_DEPT_URL = "https://coronavirusapi-france.now.sh/AllLiveData";
+        private const string ALL_DEPT_URL = "https://   /AllLiveData";
 
         private const string GLOBAL_DATA_TOKEN = "FranceGlobalLiveData";
         private const string ALL_DEP_TOKEN = "allLiveFranceData";
